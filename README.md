@@ -3,7 +3,7 @@
 ## Install
 
 ```
-go install
+go install github.com/ellemouton/goto@latest
 ```
 
 ## Recommended alias:
