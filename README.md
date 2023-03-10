@@ -27,8 +27,11 @@ $ goto register lightninglabs lnd
 // Open a commit of a stored alias (assumes the g2 alias is set)
 $ g2 lnd 74b9c9ce9
 
-// Open a coomit of an unstored repo
+// Open a commit of an unstored repo
 $ g2 lightninglabs lnd 74b9c9ce9
+
+// Open the PR that added a commit
+$ g2 pr lnd 74b9c9ce9
 
 // Just go to the repo main page
 $ g2 lnd
@@ -43,5 +46,4 @@ $ g2 lnd
    OS that the binary is being run on _and_ let it be settable so that a user
    can override the default. ie: on first run, check OS & set accordingly and
    from then on, use whatever the DB has set. Add option for user to override. 
- - [ ] Add way to quickly navigate to the PR that added a commit. 
  - [ ] Cleanup code & add documentation

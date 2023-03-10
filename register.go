@@ -5,6 +5,10 @@ import (
 	"github.com/urfave/cli"
 )
 
+var keywords = map[string]bool{
+	"pr": true,
+}
+
 var registerCommand = cli.Command{
 	Name:   "register",
 	Action: registerAlias,
@@ -23,6 +27,14 @@ func registerAlias(ctx *cli.Context) error {
 	alias := repo
 	if len(rest) == 2 {
 		alias = args.Tail()[1]
+	}
+
+	if _, ok := keywords[org]; ok {
+		return fmt.Errorf("org name clashes with keyword")
+	}
+
+	if _, ok := keywords[alias]; ok {
+		return fmt.Errorf("alias clashes with keyword")
 	}
 
 	db, err := OpenDB()
