@@ -43,4 +43,5 @@ $ g2 lnd
    OS that the binary is being run on _and_ let it be settable so that a user
    can override the default. ie: on first run, check OS & set accordingly and
    from then on, use whatever the DB has set. Add option for user to override. 
+ - [ ] Add way to quickly navigate to the PR that added a commit. 
  - [ ] Cleanup code & add documentation
